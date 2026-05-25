@@ -1,0 +1,46 @@
+public class ArraysCheck{
+    public static int [] duplicateNumber(int [] numbers){
+        int count = 0;
+
+        for(int index = 0; index < numbers.length; index++){
+            for(int inner = index + 1; inner < numbers.length; inner++){
+                if (numbers[index] == numbers[inner]){
+                    count++;
+                }
+            }
+        }
+
+        int [] result = new int [count];
+        int counter = 0;
+        
+        for(int index = 0; index < numbers.length; index++){
+            for(int inner = index + 1; inner < numbers.length; inner++){
+                if (numbers[index] == numbers[inner]){
+                   result[counter] = numbers[inner];
+                   counter++;
+                }
+            }
+        }
+        return result;   
+    }
+    
+    public static int [] sort(int [] numbers){
+    
+        for(int index = 0; index < numbers.length; index++){
+            for(int inner = index + 1; inner < numbers.length; inner++){
+                if(numbers[index] < numbers[inner]){
+                    int temp = numbers[index];
+                    numbers[index] = numbers[inner];
+                    numbers[inner] = temp;
+                }   
+            }
+
+         }
+         return numbers;
+    }
+    
+    public static void main(String[] args){
+    int [] list = {5, 0 , 3, 0, 2, 0};
+    System.out.print(java.util.Arrays.toString(sort(list)));
+    }
+}
