@@ -1,4 +1,5 @@
 public class ArraysCheck{
+
     public static int [] duplicateNumber(int [] numbers){
         int count = 0;
 
@@ -24,6 +25,7 @@ public class ArraysCheck{
         return result;   
     }
     
+
     public static int [] sort(int [] numbers){
     
         for(int index = 0; index < numbers.length; index++){
@@ -39,8 +41,5 @@ public class ArraysCheck{
          return numbers;
     }
     
-    public static void main(String[] args){
-    int [] list = {5, 0 , 3, 0, 2, 0};
-    System.out.print(java.util.Arrays.toString(sort(list)));
-    }
+
 }
