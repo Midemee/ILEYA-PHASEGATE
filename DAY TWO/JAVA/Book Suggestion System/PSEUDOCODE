@@ -1,0 +1,27 @@
+PSEUDOCODE
+Switch among 5 cases
+1. Get Suggestions
+2. Add Book
+3. Remove Book
+4. Update book
+5. Show all books
+
+Function -1 Suggest books
+create an array of 10 books 
+use random in range 10 to suggest a book 
+use random in range 1-100 to pick a page 
+Test to display the accurate book title and page
+if user would like another suggestion (yes)
+repeat the flow again, random book suggestion and random page
+else if no...return to main menu
+
+
+Function 2 Add books
+
+Function 3 Remove books
+
+Function 4 Update books
+
+Function 5 Show all books
+
+
