@@ -1,23 +1,17 @@
 public class ArraysCheck{
 
-    public static String[][] vowelsAndConsonants(String words){
-        int vowels = 0;
-        int consonants = 0;
-
-        
-        for(int index 0; index < words.length(); index++){
-            char letter = Character.toLowerCase(words.charAt(index));
-            if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u'){
-                vowels++;
-            }
-            else if(letter >= 'a' && letter <= 'z'){
-                consonants++;
+    public static int [] getIndices(int [] numbers, int target){
+        int [] result = new int [2];
+        for(int index = 0; index < numbers.length; index++){
+            for(int inner = index+1; inner < numbers.length; inner++){
+                if(numbers[index] + numbers[inner] == target){
+                    result[0] = index;
+                    result[1] = inner;
+                }
             }
         }
-        
-        int [] counts = {vowels, consonants};
-        String [][] result = {{"Vowels" + counts[0]}, {"consonants" + counts[1]}};
         return result;
     }
 
 }
+
