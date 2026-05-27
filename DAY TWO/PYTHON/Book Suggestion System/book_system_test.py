@@ -8,13 +8,13 @@ class TestThatBookSuggestionFunctionWorks(unittest.TestCase):
         books = ["Solo", "SuperIntelligence", "India After Ghandi", "Dream Count", "Gaza", "Ripple", "hidden Genius", "The Attributes"];
         suggested_book = book_system.get_suggested_books(books)
         self.assertIsNotNone(suggested_book)
-        print("Suggested book", suggested_book)
+        print("Suggested book: ", suggested_book)
               
     def test_that_the_pagenumber_is_between_one_and_hundred(self):
         pagenumber = book_system.get_pagenumber()
         self.assertTrue(pagenumber >= 1)
         self.assertTrue(pagenumber <= 100)
-        print("PageNumber", pagenumber)
+        print("PageNumber: ", pagenumber)
        
     def test_that_one_book_is_added(self):
        books = ["Solo", "SuperIntelligence", "India After Ghandi", "Dream Count", "Gaza", "Ripple"];

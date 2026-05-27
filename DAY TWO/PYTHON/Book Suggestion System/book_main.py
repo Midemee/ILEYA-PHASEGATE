@@ -1,15 +1,15 @@
 from book_system import *
-
+booklist = ["Solo", "SuperIntelligence", "India After Ghandi", "Dream Count", "Gaza", "Ripple", "hidden Genius", "The Attributes"];
 inbook_system = True
 while inbook_system:
     print(""" 
     Welcome to the Book Suggestion System!
+    0. Exit
     1. Get Suggestions
     2. Add Book
     3. Remove Book
     4. Update book
     5. Show all books
-    6. Exit
 
 """)
 
@@ -32,7 +32,7 @@ while inbook_system:
             while (optional.lower() == "yes"):
             
                 print("Book for the Day:\nBook Title: ", end ="")
-                print(get_suggested_books())
+                print(get_suggested_books(booklist))
                 print("Page: ", end ="")
                 print(get_pagenumber())
                 
@@ -41,13 +41,13 @@ while inbook_system:
         case 2:
             
             book_name = input("Enter the book title: ")
-            add_books(book_name)
+            add_books(booklist, book_name)
             print("Book successfully added !")
             
         case 3:
 
             book_name = input("Enter the book title to remove: ")
-            remove_books(book_name)
+            remove_books(booklist, book_name)
             print("Book successfully removed!")
             
             
@@ -55,13 +55,13 @@ while inbook_system:
 
             old_bookname = input("Enter the old book title: ")
             new_bookname = input("Enter the new book title: ")
-            update_books(old_bookname, new_bookname)
+            update_books(booklist, old_bookname, new_bookname)
             print("Book updated successfully!")
             
         case 5:
             print("All Books")
             count = 1
-            for elements in show_books():
+            for elements in show_books(booklist):
                 print(f"{count}. {elements}")
                 count+=1
             
