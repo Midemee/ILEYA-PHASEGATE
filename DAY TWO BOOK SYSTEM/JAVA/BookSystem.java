@@ -25,11 +25,20 @@ public class BookSystem{
         newIndex++;
         }
         newBookList[newIndex] = newBook;
-     return newBookList;
+        books = newBookList;
+     return books;
     }
     
     public static String [] removeBooks(String bookName){
-    String [] newBookList = new String[books.length - 1];
+        int count = 0;
+
+        for (int index = 0; index < books.length; index++) {
+            if (!books[index].equals(bookName)) {
+            count++;
+            }
+        }
+
+        String[] newBookList = new String[count];
     
         int newIndex = 0;
         for(int index = 0; index < books.length; index ++){
@@ -38,7 +47,8 @@ public class BookSystem{
                 newIndex++;        
             }
         }
-     return newBookList;
+        books = newBookList;
+     return books;
     }
     
     public static String [] updateBooks(String oldBookName, String newBookName){

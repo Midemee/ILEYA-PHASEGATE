@@ -1,0 +1,51 @@
+PSEUDOCODE
+Display list with 20 questions, each has option A and B
+Create a list for answers, 20 slots
+Loop through the list and display the current question
+collect user response
+If response is A or B, store it in the answers array and exit
+Else, display Invalid input and repeat the question until A or B is entered
+
+Print out all the answers 
+Set the 8 categories to zero (extrovert, introvert, sensing, intuition, thinking, feeling, judging, perceiving)
+four group (EI, SN, TF, JP)
+
+loop through the list of answers
+If questions belong to Extrovert/Intovert group
+    if answer is A, increase extrovert
+    else increase introvert
+    
+Else if questions belong to Sensing/Intuition group
+    if answer is A, increase sensing
+    else increase intuition
+    
+Else if questions belong to Thinking/Feeling group
+    if answer is A, increase thinking
+    else increase feeling
+    
+Else if questions belong to Judging/Perceiving group
+    if answer is A, increase judging
+    else increase perceiving
+    
+    
+    
+Declare a variable for personality and set to empty string
+If extrovert is greater than introvert
+    add E to the personality array
+else, add I to it
+
+If sensing is greater than intuition
+    add S to the personality array
+else, add N to it
+
+If Thinking is greater than feeling
+    add T to the personality array
+else, add F to it
+
+If Judging is greater than Perceiving
+    add J to the personality array
+else, add P to it
+
+
+Print or display the personality array
+

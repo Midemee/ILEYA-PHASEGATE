@@ -1,0 +1,33 @@
+PSEUDOCODE
+prompt user for creditCardNumber
+
+check for the card type
+IF creditCardNumber starts with "4"
+    cardType = "Visa Card"
+ELSE IF creditCardNumber starts with "5"
+    cardType = "MasterCard"
+ELSE IF creditCardNumber starts with "37"
+    cardType = "American Express"
+ELSE IF creditCardNumber starts with "6"
+    cardType = "Discover Card"
+
+boolean function to check card validity
+length of creditcard no = number of digits
+IF length < 13 OR length > 16
+    PRINT "Invalid Length"
+    False
+
+calculate the even positions sum
+FOR each second digit from right to left
+IF result > 9 result = result / 10 + result % 10
+
+calculate the odd positions sum
+FOR remaining digits from right to left, add digit to oddSum
+calculate total = evenSum + oddSum
+
+IF total modulus 10 == 0
+validity = true
+ELSE validity = false
+
+Print out cardType, length and validity statu
+

@@ -1,7 +1,13 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class BookSystemTest{
+
+@BeforeEach
+public void setUp() {
+    BookSystem.books = new String[]{"Solo", "SuperIntelligence", "India After Ghandi", "Dream Count", "Gaza", "Ripple", "Option B", "The Attributes", "Animal Farm"};
+}
 
     @Test
     public void testThatSuggestedBookIsFromTheList(){
@@ -44,9 +50,9 @@ public class BookSystemTest{
     }
     
     @Test
-    public void testThatBooksIsShown(){
+    public void testThatAllBooksIsShown(){
     String[] actual = BookSystem.showBooks();
-    String[] result = {"Solo", "SuperIntelligence", "India After Ghandi", "Dream Count", "Gaza", "Ripple", "Option B", "The Attributes", "Animal Kingdom"};
+    String[] result = {"Solo", "SuperIntelligence", "India After Ghandi", "Dream Count", "Gaza", "Ripple", "Option B", "The Attributes", "Animal Farm"};
     assertArrayEquals(actual, result);
     }      
 }

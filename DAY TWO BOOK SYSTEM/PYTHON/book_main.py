@@ -10,7 +10,6 @@ while inbook_system:
     3. Remove Book
     4. Update book
     5. Show all books
-
 """)
 
     user_choice = int(input("Choose from options: "))
