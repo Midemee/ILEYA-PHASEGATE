@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class BookSystemTest{
 
 @BeforeEach
-public void setUp() {
+public void resetData() {
     BookSystem.books = new String[]{"Solo", "SuperIntelligence", "India After Ghandi", "Dream Count", "Gaza", "Ripple", "Option B", "The Attributes", "Animal Farm"};
 }
 
