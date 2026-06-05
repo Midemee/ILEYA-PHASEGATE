@@ -1,6 +1,6 @@
 import java.util.Random;
 public class BookSystem{
-      public static String [] books = {"Solo", "SuperIntelligence", "India After Ghandi", "Dream Count", "Gaza", "Ripple", "Option B", "The Attributes", "Animal Farm"};
+     static String [] books = {"Solo", "SuperIntelligence", "India After Ghandi", "Dream Count", "Gaza", "Ripple", "Option B", "The Attributes", "Animal Farm"};
      
      //public static void main(String[] args)   
      public static String getSuggestedBooks(){
