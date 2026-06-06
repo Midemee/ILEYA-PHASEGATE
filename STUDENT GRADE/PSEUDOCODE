@@ -1,0 +1,13 @@
+PSEUDOCODE
+
+collect user input- number of students
+collect user input- number of subjects
+declare a two dimensional array that will take in the numbers of students and the number of subjects
+collect the scores for each student on every subject
+while the score less than 1 or greater than 0, 
+display invalid input and collect input again
+Display the class summary 
+
+
+TESTS
+if 
