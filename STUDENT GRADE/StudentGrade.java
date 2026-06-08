@@ -45,13 +45,6 @@ public class StudentGrade{
     }
     
     public static double calculateAverage(int [] scores){
-/*        double sum = 0;
-        double average = 0;
-        for(int index = 0; index < scores.length; index++){
-            sum += scores[index];
-        }
-        average = sum / scores.length;
-        return average;*/
         double average = 0;
         average = (double)calculateTotal(scores)/ scores.length;
         return average;
@@ -60,6 +53,9 @@ public class StudentGrade{
     public static void printResult(int[][] scores, int students, int subjects){
         System.out.println("\n==================================================");
         System.out.print("STUDENT\t\t");
+        
+/*        double highestAverage = 0
+        int bestStudent = 0;*/
         for(int subject = 0; subject < subjects; subject++){
             System.out.print("SUB" + (subject+1) + "\t"); 
         }
@@ -74,9 +70,43 @@ public class StudentGrade{
         int total = calculateTotal(scores[student]);
         double average = calculateAverage(scores[student]);
         System.out.printf("%d\t%.2f\t%n", total, average);
+
+/*        if(average > highestAverage){
+            highestAverage = average;
+            bestStudent = scores[student][subject];
+        }*/
         }
 
         System.out.println("=====================================================");
+    }
+    
+    public static double getBestStudent(int[][] scores){
+        double highestAverage = calculateAverage(scores[0]);
+        int bestStudent = 0;
+        double average = calculateAverage(scores[0]);
+        
+        for(int student = 1; student < scores.length; student++){
+        double average = calculateAverage(scores[student]);
+        if(average > highestAverage){
+            highestAverage = average;
+            bestStudent = student;
+        }
+        }
+        return bestStudent;
+    }
+    
+    public static int calculateSubjectTotal(int[][] scores, subject){
+    int subjectTotal = 0;
+    for(int student = 0; student < scores.length; student++){
+        subjectTotal += scores[student][subject];
+    }
+    return subjectTotal;
+    }
+    
+    public static double calculateSubjectAverage(int[][] scores, int subject){
+        double subjectAverage = 0;
+        int total = calculateSubjectTotal(scores, subject);
+        subjectAverage = (double)total/scores.length;
     }
 
 }

@@ -10,6 +10,14 @@ public class StudentGradeTest{
         int expected = 188;
         assertEquals(expected, actual);        
         }
+
+    @Test
+        public void testThatTotalOfAStudentScoresWithZerosOnSomeSubjectsGivesAccurateResult(){
+        int [] scores = {75, 0, 42};
+        int actual = StudentGrade.calculateTotal(scores);
+        int expected = 117;
+        assertEquals(expected, actual);        
+        }
     
     @Test
         public void testThatAverageOfAStudentScoresOnallSubjectsGivesAccurateResult(){
