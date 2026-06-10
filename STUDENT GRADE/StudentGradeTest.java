@@ -4,35 +4,66 @@ import static org.junit.jupiter.api.Assertions.*;
 public class StudentGradeTest{
 
     @Test
-        public void testThatTotalOfAStudentScoresOnallSubjectsGivesAccurateResult(){
-        int [] scores = {65, 83, 40};
-        int actual = StudentGrade.calculateTotal(scores);
-        int expected = 188;
-        assertEquals(expected, actual);        
-        }
+    public void testThatTotalOfStudentScoresOnAllSubjectsGivesAccurateResult(){
+        int[][] scores = {{65, 83, 40}};
+        int[] result = StudentGrade.calculateTotal(scores);
+        assertEquals(188, result[0]);
+    }
 
     @Test
-        public void testThatTotalOfAStudentScoresWithZerosOnSomeSubjectsGivesAccurateResult(){
-        int [] scores = {75, 0, 42};
-        int actual = StudentGrade.calculateTotal(scores);
-        int expected = 117;
-        assertEquals(expected, actual);        
-        }
-    
+    public void testThatTotalOfStudentScoresWithZerosGivesAccurateResult(){
+        int[][] scores = {{75, 0, 42}};
+        int[] result = StudentGrade.calculateTotal(scores);
+        assertEquals(117, result[0]);
+    }
+
     @Test
-        public void testThatAverageOfAStudentScoresOnallSubjectsGivesAccurateResult(){
-        int [] scores = {50, 80, 90};
-        double actual = StudentGrade.calculateAverage(scores);
-        double expected = 73.33;
-        assertEquals(expected, actual, 0.01);        
-        }
-        
+    public void testThatTotalsAreCorrectForMultipleStudents(){
+        int[][] scores = {{65, 83, 40}, {75, 0, 42}};
+        int[] result = StudentGrade.calculateTotal(scores);
+        assertEquals(188, result[0]);
+        assertEquals(117, result[1]);
+    }
+
     @Test
-        public void testThatAverageOfAStudentScoresWithZerosOnSomeSubjectsGivesAccurateResult(){
-        int [] scores = {55, 0, 79};
-        double actual = StudentGrade.calculateAverage(scores);
-        double expected = 44.67;
-        assertEquals(expected, actual, 0.01);        
-        }
+    public void testThatAverageOfStudentScoresOnAllSubjectsGivesAccurateResult(){
+        int[] totals = {220};
+        double[] averages = StudentGrade.calculateAverage(totals, 3);
+        assertEquals(73.33, averages[0], 0.01);
+    }
+
+    @Test
+    public void testThatAverageOfStudentScoresWithZerosGivesAccurateResult(){
+        int[] totals      = {134};
+        double[] averages = StudentGrade.calculateAverage(totals, 3);
+        assertEquals(44.67, averages[0], 0.01);
+    }
+
+    @Test
+    public void testThatAveragesAreCorrectForMultipleStudents(){
+        int[] totals = {220, 134};
+        double[] averages = StudentGrade.calculateAverage(totals, 3);
+        assertEquals(73.33, averages[0], 0.01);
+        assertEquals(44.67, averages[1], 0.01);
+    }
+
+    @Test
+    public void testThatPositionsAreCorrectlyAssigned(){
+        int[] totals = {137, 216, 154, 227};
+        int[] positions = StudentGrade.findPositions(totals);
+        assertEquals(4, positions[0]);
+        assertEquals(2, positions[1]);
+        assertEquals(3, positions[2]);
+        assertEquals(1, positions[3]);
+    }
+
+    @Test
+    public void testThatStudentsWithEqualTotalsGetSamePosition(){
+        int[] totals = {150, 150, 200};
+        int[] positions = StudentGrade.findPositions(totals);
+        assertEquals(2, positions[0]);
+        assertEquals(2, positions[1]);
+        assertEquals(1, positions[2]);
+    }
 
 }
