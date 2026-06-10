@@ -71,7 +71,7 @@ public class StudentGradeMain{
 
     System.out.println("Subject " + (subject + 1));
     System.out.printf("Highest scoring student is: student %d scoring %d%n", (highest[0] + 1), highest[1]);
-    System.out.printf("Lowest scoring student is: student %d scoring %d%n",  (lowest[0]  + 1), lowest[1]);
+    System.out.printf("Lowest scoring student is: student %d scoring %d%n", (lowest[0]  + 1), lowest[1]);
     System.out.printf("Total Score is: %d%n",      subjectTotal);
     System.out.printf("Average score is: %.2f%n",  subjectAverage);
     System.out.printf("Number of passes: %d%n",    passes);
