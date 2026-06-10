@@ -64,7 +64,7 @@ public class StudentGrade{
 
     public static int[] findEasiestSubject(int[][] scores){
         int easiestSubject = 0;
-        int highestPasses  = -1;
+        int highestPasses = -1;
         for(int subject = 0; subject < scores[0].length; subject++){
             int passes = 0;
             for(int student = 0; student < scores.length; student++){
@@ -80,11 +80,11 @@ public class StudentGrade{
     }
 
     public static int[] findHighestScoringStudent(int[][] scores, int subject){
-        int highestScore        = scores[0][subject];
+        int highestScore = scores[0][subject];
         int highestScoreStudent = 0;
         for(int student = 0; student < scores.length; student++){
             if(scores[student][subject] > highestScore){
-                highestScore        = scores[student][subject];
+                highestScore = scores[student][subject];
                 highestScoreStudent = student;
             }
         }
@@ -93,11 +93,11 @@ public class StudentGrade{
     }
 
     public static int[] findLowestScoringStudent(int[][] scores, int subject){
-        int lowestScore        = scores[0][subject];
+        int lowestScore = scores[0][subject];
         int lowestScoreStudent = 0;
         for(int student = 0; student < scores.length; student++){
             if(scores[student][subject] < lowestScore){
-                lowestScore        = scores[student][subject];
+                lowestScore = scores[student][subject];
                 lowestScoreStudent = student;
             }
         }
