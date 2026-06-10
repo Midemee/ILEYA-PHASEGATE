@@ -72,7 +72,8 @@ public class StudentGradeTest{
         assertEquals(200, StudentGrade.calculateSubjectTotal(scores, 1));
         assertEquals(198, StudentGrade.calculateSubjectTotal(scores, 2));
     }
-
+    
+    //Allsubjects
     @Test
     public void testThatIfIPassScoresForAllSubjectsItGivesCorrectAverage(){
         int[][] scores = {{67, 21, 49}, {98, 62, 56}, {93, 34, 27}, {78, 83, 66}};

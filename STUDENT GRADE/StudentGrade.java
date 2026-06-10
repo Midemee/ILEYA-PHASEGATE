@@ -161,6 +161,7 @@ public class StudentGrade{
         return worstStudent;
     }
 
+    //class total
     public static int calculateClassTotal(int[] totals){
         int classTotal = 0;
         for(int student = 0; student < totals.length; student++){
