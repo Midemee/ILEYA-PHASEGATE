@@ -66,7 +66,11 @@ public class StudentGradeMain{
 
     int passes = 0, failures = 0;
     for(int student = 0; student < scores.length; student++){
-        if(scores[student][subject] >= 50) passes++; else failures++;
+        if(scores[student][subject] >= 50){
+        passes++;
+        }else{
+        failures++;
+        } 
     }
 
     System.out.println("Subject " + (subject + 1));
