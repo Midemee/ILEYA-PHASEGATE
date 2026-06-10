@@ -35,14 +35,14 @@ public class StudentGradeMain{
     double[] averages = StudentGrade.calculateAverage(totals, scores[0].length);
     int[] positions = StudentGrade.findPositions(totals);
 
-    System.out.println("\n==========================================================");
+    System.out.println("\n====================================================================");
     System.out.print("STUDENT\t\t");
 
     for(int subject = 0; subject < scores[0].length; subject++){
         System.out.print("SUB" + (subject + 1) + "\t");
     }
     System.out.println("TOT\tAVG\tPOS");
-    System.out.println("============================================================");
+    System.out.println("======================================================================");
 
     for(int student = 0; student < scores.length; student++){
         System.out.print("Student " + (student + 1) + "\t");
@@ -54,8 +54,8 @@ public class StudentGradeMain{
         System.out.printf("%d\t%.2f\t%d%n", totals[student], averages[student], positions[student]);
     }
 
-    System.out.println("==============================================================");
-    System.out.println("==============================================================");
+    System.out.println("========================================================================");
+    System.out.println("========================================================================");
     
     System.out.println("\nSUBJECT SUMMARY");
     for(int subject = 0; subject < scores[0].length; subject++){
