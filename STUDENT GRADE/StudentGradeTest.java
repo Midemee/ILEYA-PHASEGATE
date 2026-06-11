@@ -72,8 +72,7 @@ public class StudentGradeTest{
         assertEquals(200, StudentGrade.calculateSubjectTotal(scores, 1));
         assertEquals(198, StudentGrade.calculateSubjectTotal(scores, 2));
     }
-    
-    //Allsubjects
+
     @Test
     public void testThatIfIPassScoresForAllSubjectsItGivesCorrectAverage(){
         int[][] scores = {{67, 21, 49}, {98, 62, 56}, {93, 34, 27}, {78, 83, 66}};
@@ -82,5 +81,22 @@ public class StudentGradeTest{
         assertEquals(49.50, StudentGrade.calculateSubjectAverage(scores, 2), 0.01);
     }
 
+    @Test
+    public void ThatIfIPassAllScoresForAllStudentsIWillFindTheHighestScoringStudent(){
+        int[][] scores = {{67, 21, 49}, {98, 62, 56}, {93, 34, 27}, {78, 83, 66}};
+        int[] result   = StudentGrade.findHighestScoringStudent(scores, 0);
+        assertEquals(1, result[0]);
+        assertEquals(98, result[1]);
+    }
 
+    @Test
+    public void ThatIfIPassAllScoresForAllStudentsIWillFindTheLowestScoringStudent(){
+        int[][] scores = {{67, 21, 49}, {98, 62, 56}, {93, 34, 27}, {78, 83, 66}};
+        int[] result   = StudentGrade.findLowestScoringStudent(scores, 0);
+        assertEquals(0, result[0]);
+        assertEquals(67, result[1]);
+    }
+
+    
+    }
 }
